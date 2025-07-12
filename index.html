@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Employee Directory</h1>
+
+  
+  <div class="controls">
+    <input type="text" id="searchBox" placeholder="Search by name or email">
+
+    <label for="sortSelect">Sort By:</label>
+    <select id="sortSelect">
+      <option value="">-- Select --</option>
+      <option value="firstName">First Name</option>
+      <option value="department">Department</option>
+    </select>
+
+    <label for="itemsPerPage">Show:</label>
+    <select id="itemsPerPage">
+      <option value="10">10</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+    </select>
+
+    <button id="addEmployeeBtn">+ Add Employee</button>
+  </div>
+
+ 
+  <div id="employeeListSection">
+    <div id="employeeList"></div>
+    <div id="paginationControls"></div>
+  </div>
+
+  
+  <div id="formSection" style="display: none;">
+    <h2 id="formTitle">Add Employee</h2>
+
+    <form id="employeeForm">
+      <input type="hidden" id="employeeId">
+
+      <label>First Name:<br>
+        <input type="text" id="firstName" required>
+      </label><br><br>
+
+      <label>Last Name:<br>
+        <input type="text" id="lastName" required>
+      </label><br><br>
+
+      <label>Email:<br>
+        <input type="email" id="email" required>
+      </label><br><br>
+
+      <label>Department:<br>
+        <select id="department" required>
+          <option value="">-- Select Department --</option>
+          <option value="HR">HR</option>
+          <option value="IT">IT</option>
+          <option value="Finance">Finance</option>
+        </select>
+      </label><br><br>
+
+      <label>Role:<br>
+        <select id="role" required>
+          <option value="">-- Select Role --</option>
+          <option value="Manager">Manager</option>
+          <option value="Developer">Developer</option>
+          <option value="Analyst">Analyst</option>
+        </select>
+      </label><br><br>
+
+      <button type="submit">Save</button>
+      <button type="button" id="cancelBtn">Cancel</button>
+    </form>
+  </div>
+
+  
+  <script src="app.js"></script>
+
+</body>
+</html>
